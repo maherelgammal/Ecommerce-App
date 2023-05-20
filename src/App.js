@@ -55,7 +55,7 @@ export default function App() {
       </>
     }
   }
-  let routers = createBrowserRouter([
+  let routers = createHashRouter([
     {
       path: "", element: <Layout crrUser={crrUser} clearUserData={clearUserData} />, children: [
         { index: true, element: <Home /> },
