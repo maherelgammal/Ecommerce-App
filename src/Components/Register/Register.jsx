@@ -16,7 +16,7 @@ export default function Register() {
   const [isLoading, setisLoading] = useState(false)
   async function handleRegister(values) {
     setisLoading(true)
-    axios.post('https://route-ecommerce-app.vercel.app/api/v1/auth/signup', values).then((data) => {
+    axios.post('https://ecommerce.routemisr.com/api/v1/auth/signup', values).then((data) => {
       console.log(data);
       if (data.data.message === "success") {
         setisLoading(false)

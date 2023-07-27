@@ -12,7 +12,7 @@ export default function AllOrders({ crrUser }) {
 
     async function getAllOrders() {
         try {
-            const { data } = await axios.get(`https://route-ecommerce-app.vercel.app/api/v1/orders/user/${crrUser.id}`)
+            const { data } = await axios.get(`https://ecommerce.routemisr.com/api/v1/orders/user/${crrUser.id}`)
             console.log(data.data.cartItems.length);
             // setcartItems(data)
             // setNumOfCartItems((NumOfCartItems - data.data.cartItems.length))

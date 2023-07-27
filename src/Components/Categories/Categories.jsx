@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export default function Categories() {
   const [Categories, setCategories] = useState(null)
   async function getCategories() {
-    const { data } = await axios.get('https://route-ecommerce-app.vercel.app/api/v1/categories')
+    const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/categories')
     setCategories(data.data)
     console.log(data.data);
   }

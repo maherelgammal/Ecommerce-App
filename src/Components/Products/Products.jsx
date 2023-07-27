@@ -11,7 +11,7 @@ export default function Products(props) {
     const [Products, setProducts] = useState(null)
     const getAllproducts = async () => {
         try {
-            let { data } = await Axios.get(`https://route-ecommerce-app.vercel.app/api/v1/products`)
+            let { data } = await Axios.get(`https://ecommerce.routemisr.com/api/v1/products`)
             setProducts(data.data);
         } catch (error) {
             console.log("Error", error);

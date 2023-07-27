@@ -9,7 +9,7 @@ export default function CategoryProducts() {
     const [probras, setprobras] = useState([])
     async function getCategoryProducts() {
         try {
-            let { data } = await Axios.get(`https://route-ecommerce-app.vercel.app/api/v1/products`, {
+            let { data } = await Axios.get(`https://ecommerce.routemisr.com/api/v1/products`, {
                 params: { "category": id }
             })
 

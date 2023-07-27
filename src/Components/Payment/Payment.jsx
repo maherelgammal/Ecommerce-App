@@ -12,7 +12,7 @@ export default function Payment() {
     async function confirmCashOrder() {
         console.log(CartId);
         try {
-            const { data } = await axios.post(`https://route-ecommerce-app.vercel.app/api/v1/orders/${CartId}`,
+            const { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/${CartId}`,
                 {
                     "shippingAddress": {
                         "details": document.querySelector("#details").value,
@@ -35,7 +35,7 @@ export default function Payment() {
 
     async function confirmCreditOrder() {
         try {
-            const { data } = await axios.post(`https://route-ecommerce-app.vercel.app/api/v1/orders/checkout-session/${CartId}`, {
+            const { data } = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${CartId}`, {
                 "shippingAddress": {
                     "details": document.querySelector("#details").value,
                     "phone": document.querySelector("#Phone").value,

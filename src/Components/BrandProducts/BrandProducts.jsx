@@ -9,7 +9,7 @@ export default function BrandProducts() {
     const [probras, setprobras] = useState([])
     async function getBrandProducts() {
         try {
-            let { data } = await Axios.get(`https://route-ecommerce-app.vercel.app/api/v1/products`, {
+            let { data } = await Axios.get(`https://ecommerce.routemisr.com/api/v1/products`, {
                 params: { "brand": id }
             })
 

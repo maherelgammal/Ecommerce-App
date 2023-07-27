@@ -19,7 +19,7 @@ export default function CartContextProvider({ children }) {
     }
     async function addProduct(id) {
         try {
-            const { data } = await axios.post('https://route-ecommerce-app.vercel.app/api/v1/cart',
+            const { data } = await axios.post('https://ecommerce.routemisr.com/api/v1/cart',
                 { "productId": id }, { headers: { "token": localStorage.getItem('tkn') } }
             )
             console.log(data.numOfCartItems)
@@ -38,7 +38,7 @@ export default function CartContextProvider({ children }) {
 
     async function deleteProductsFromCart(id) {
         try {
-            const { data } = await axios.delete(`https://route-ecommerce-app.vercel.app/api/v1/cart/${id}`, {
+            const { data } = await axios.delete(`https://ecommerce.routemisr.com/api/v1/cart/${id}`, {
                 headers: { "token": localStorage.getItem('tkn') }
             })
             if (data.status === 'success') {
@@ -56,7 +56,7 @@ export default function CartContextProvider({ children }) {
 
     async function getProductsInCart() {
         try {
-            const { data } = await axios.get('https://route-ecommerce-app.vercel.app/api/v1/cart', {
+            const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/cart', {
                 headers: { "token": localStorage.getItem('tkn') }
             })
             console.log(data);
@@ -73,7 +73,7 @@ export default function CartContextProvider({ children }) {
 
     async function updateCountInCart(id, count) {
         try {
-            const { data } = await axios.put(`https://route-ecommerce-app.vercel.app/api/v1/cart/${id}`,
+            const { data } = await axios.put(`https://ecommerce.routemisr.com/api/v1/cart/${id}`,
                 {
                     count: count
                 },

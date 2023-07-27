@@ -15,7 +15,7 @@ export default function ProductDetails() {
 
 
     const getProductsDetails = async () => {
-        let { data } = await Axios.get(`https://route-ecommerce-app.vercel.app/api/v1/products/${id}`)
+        let { data } = await Axios.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`)
         setProductsDetails(data.data);
     }
 
