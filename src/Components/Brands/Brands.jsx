@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet'
 export default function Brands() {
   const [Brands, setBrands] = useState(null)
   async function getBrands() {
-    const { data } = await axios.get('https://route-ecommerce-app.vercel.app/api/v1/brands')
+    const { data } = await axios.get('https://ecommerce.routemisr.com/api/v1/brands')
     setBrands(data.data)
 
   }
